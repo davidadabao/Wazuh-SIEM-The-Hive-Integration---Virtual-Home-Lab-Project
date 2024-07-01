@@ -1,7 +1,6 @@
 # Wazuh SIEM & TheHive Integration - Virtual Home Lab Project
 
-The Annual Sales Report Data Analysis project aims to provide comprehensive insights into the sales performance of a company over the past year. By leveraging advanced data analysis techniques, the project seeks to extract valuable information from sales data, enabling stakeholders to make informed decisions and strategize for future growth.
-
+In this home lab, i integrate Wazuh with TheHive to automatically send alerts issued by Wazuh to TheHive. This will allow a SOC Analysts have the option to investigate and respond to these alerts and create cases if required.
 
 ```
 sudo yum update
