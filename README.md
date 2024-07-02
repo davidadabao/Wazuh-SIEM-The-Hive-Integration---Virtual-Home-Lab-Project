@@ -216,7 +216,7 @@ sudo chown root:wazuh /var/ossec/integrations/custom-w2thive.py
 sudo chown root:wazuh /var/ossec/integrations/custom-w2thive
 ```
 
-### 5. Final integration step - Enabling the integration in the Wazuh manager configuration file*** <br>
+### 5. Final integration step - Enabling the integration in the Wazuh Manager configuration file <br>
 
 I use a text editor to modify `/var/ossec/etc/ossec.conf` and insert the below code. You will need to insert the IP address for your The Hive server inside the `<hook_url>` tags as well as insert your API key inside the `<api_key>` tags. I placed the code in my case just under the `</global>` tag in the config, make sure that your indentations match up to avoid running into issues.
 
@@ -237,7 +237,19 @@ Once complete, we need to restart Wazuh Manager:
 
 `sudo systemctl restart wazuh-manager`
 
-Next steps: If all went well, you should shortly see alerts being generated under the `Alerts` tab in The Hive.
+Next steps: If all went well, you should shortly see alerts being generated under the `Alerts` tab in TheHive (Refresh multiple times).
+
+# Screenshots
+
+In this home lab, i was able to integrate Wazuh SIEM with TheHive to automatically send alerts issued by Wazuh to TheHive. This will allow a SOC Analysts have the option to investigate and respond to these alerts and create cases if required.
+
+![Wazuh](https://github.com/davidadabao/Wazuh-SIEM-TheHive-Integration/assets/96911098/40101d7a-c135-4f71-a226-2ca3b7049b88) <br>
+
+![TheHive](https://github.com/davidadabao/Wazuh-SIEM-TheHive-Integration/assets/96911098/dd0a746f-9a93-4d69-aaa8-a9a06133e17a) <br>
+
+![Kali Machine](https://github.com/davidadabao/Wazuh-SIEM-TheHive-Integration/assets/96911098/5c3b0b5c-6609-46e8-9da8-b3c0e19ddd55) <br>
+
+![TheHive Alerts](https://github.com/davidadabao/Wazuh-SIEM-TheHive-Integration/assets/96911098/f574102c-8fcf-4f70-a96e-3515a9c5c4c6) <br>
 
 For reference and cuztomization, kindly reference TheHive and Wazuh integration for incident response. <br>
 [Using Wazuh and TheHive for threat protection and incident response](https://wazuh.com/blog/using-wazuh-and-thehive-for-threat-protection-and-incident-response/)
